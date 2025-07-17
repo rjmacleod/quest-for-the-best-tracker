@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quest for the Best - Anime Top 100</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .tab-button.active {
+            background-color: #4f46e5;
+            color: white;
+            border-color: #4f46e5;
+        }
+        .list-content {
+            display: none;
+        }
+        .list-content.active {
+            display: block;
+        }
+        .grid-slot.placed {
+            background-color: #312e81;
+            border-color: #4f46e5;
+        }
+        .grid-slot.range-highlight {
+             background-color: #374151;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100">
+
+    <div class="container mx-auto p-4 md:p-8 max-w-4xl">
+
+        <header class="text-center border-b border-gray-700 pb-6 mb-6">
+            <h1 class="text-4xl md:text-5xl font-bold">Quest for the Best</h1>
+            <p class="text-lg text-gray-400 mt-2">The Unofficial Top 100 Anime List Tracker</p>
+            <div class="update-banner bg-gray-800 border border-gray-700 rounded-lg p-3 mt-6 text-sm max-w-md mx-auto" id="update-banner">
+                <!-- JS will populate this -->
+            </div>
+        </header>
+
+        <nav class="flex justify-center mb-8">
+            <div class="flex rounded-lg border border-gray-700">
+                <button class="tab-button active text-white py-2 px-6 rounded-l-lg focus:outline-none" onclick="showList('flattened-list')">Flattened List</button>
+                <button class="tab-button text-white py-2 px-6 rounded-r-lg focus:outline-none border-l border-gray-700" onclick="showList('absolute-list')">Absolute List</button>
+            </div>
+        </nav>
+
+        <main>
+            <!-- Flattened List (Default View) -->
+            <div id="flattened-list" class="list-content active">
+                <ol class="space-y-3">
+                    <!-- JS will populate this -->
+                </ol>
+            </div>
+
+            <!-- Absolute List -->
+            <div id="absolute-list" class="list-content">
+                <div class="grid grid-cols-5 sm:grid-cols-10 gap-2 md:gap-3" id="absolute-grid-container">
+                    <!-- JS will generate the 100 slots here -->
+                </div>
+            </div>
+
+            <!-- Kill-Quested Section -->
+            <div class="kill-quested mt-12 pt-6 border-t border-gray-700">
+                <h2 class="text-2xl font-bold text-center mb-4">Kill-Quested</h2>
+                <ul class="flex justify-center gap-4 flex-wrap">
+                    <!-- JS will populate this -->
+                </ul>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // --- DATA ---
+        const lastUpdatedDate = 'July 17, 2025';
+        const lastEpisodeLink = 'https://www.youtube.com/watch?v=mIrO94FXJRk';
+        const lastEpisodeTitle = 'THE TOP 100 BEST ANIME OF ALL TIME GAUNTLET BEGINS';
+
+        const flattenedListData = [
+            { title: 'Baccano!', url: 'https://anilist.co/anime/2251/Baccano/', caveat: null },
+            { title: 'Patlabor', url: 'https://anilist.co/anime/324/Mobile-Police-Patlabor-ON-TELEVISION/', caveat: 'Note: All entries combined.' },
+            { title: 'Re:ZERO', url: 'https://anilist.co/anime/21355/ReZERO-Starting-Life-in-Another-World/', caveat: 'Caveat: Expected Top 10-15. Could move higher.' },
+            { title: 'Frieren: Beyond Journey\'s End', url: 'https://anilist.co/anime/154587/Frieren-Beyond-Journeys-End/', caveat: 'Caveat: Tentatively placed in the late teens/early 20s.' },
+            { title: 'Delicious in Dungeon', url: 'https://anilist.co/anime/153518/Delicious-in-Dungeon/', caveat: 'Caveat: Tentatively placed in the late teens/early 20s.' },
+            { title: 'Princess Mononoke', url: 'https://anilist.co/anime/164/Princess-Mononoke/', caveat: 'Caveat: Tentatively placed in the 30s.' },
+            { title: 'Royal Space Force', url: 'https://anilist.co/anime/1034/Royal-Space-Force-The-Wings-of-Honnamise/', caveat: null },
+            { title: 'KonoSuba', url: 'https://anilist.co/anime/21202/KONOSUBA-Gods-blessing-on-this-wonderful-world/', caveat: 'Note: All seasons and movie combined.' },
+            { title: 'Vampire Hunter D: Bloodlust', url: 'https://anilist.co/anime/543/Vampire-Hunter-D-Bloodlust/', caveat: null },
+            { title: 'Akudama Drive', url: 'https://anilist.co/anime/116566/Akudama-Drive/', caveat: null },
+            { title: 'Cromartie High School', url: 'https://anilist.co/anime/114/Cromartie-High-School/', caveat: null },
+        ];
+
+        const absoluteListPlacements = {
+            1: { title: 'Baccano!', url: 'https://anilist.co/anime/2251/Baccano/' },
+            2: { title: 'Patlabor', url: 'https://anilist.co/anime/324/Mobile-Police-Patlabor-ON-TELEVISION/' },
+            13: { title: 'Re:Zero', url: 'https://anilist.co/anime/21355/ReZERO-Starting-Life-in-Another-World/', range: [10, 15] },
+            19: { title: 'Frieren', url: 'https://anilist.co/anime/154587/Frieren-Beyond-Journeys-End/', range: [16, 25] },
+            20: { title: 'Dungeon Meshi', url: 'https://anilist.co/anime/153518/Delicious-in-Dungeon/', range: [16, 25] },
+            35: { title: 'P. Mononoke', url: 'https://anilist.co/anime/164/Princess-Mononoke/', range: [30, 40] },
+            50: { title: 'Royal Space Force', url: 'https://anilist.co/anime/1034/Royal-Space-Force-The-Wings-of-Honnamise/' },
+            51: { title: 'KonoSuba', url: 'https://anilist.co/anime/21202/KONOSUBA-Gods-blessing-on-this-wonderful-world/' },
+            52: { title: 'Vampire Hunter D', url: 'https://anilist.co/anime/543/Vampire-Hunter-D-Bloodlust/' },
+            53: { title: 'Akudama Drive', url: 'https://anilist.co/anime/116566/Akudama-Drive/' },
+            54: { title: 'Cromartie High', url: 'https://anilist.co/anime/114/Cromartie-High-School/' },
+        };
+
+        const killQuestedData = [
+            { title: 'Your Name', url: 'https://anilist.co/anime/21519/Your-Name/' },
+            { title: 'Solo Leveling', url: 'https://anilist.co/anime/151807/Solo-Leveling/' },
+        ];
+        
+        // --- FUNCTIONS ---
+
+        function showList(listId) {
+            document.querySelectorAll('.list-content').forEach(content => content.classList.remove('active'));
+            document.querySelectorAll('.tab-button').forEach(button => button.classList.remove('active'));
+            document.getElementById(listId).classList.add('active');
+            document.querySelector(`button[onclick="showList('${listId}')"]`).classList.add('active');
+        }
+        
+        function populateFlattenedList() {
+            const listElement = document.querySelector('#flattened-list ol');
+            if (!listElement) return;
+            flattenedListData.forEach((anime, index) => {
+                const listItem = document.createElement('li');
+                listItem.className = 'bg-gray-800 border border-gray-700 rounded-lg p-4 flex items-center space-x-4';
+                
+                let caveatHTML = '';
+                if (anime.caveat) {
+                    caveatHTML = `<p class="text-xs text-gray-400 italic mt-1">${anime.caveat}</p>`;
+                }
+
+                listItem.innerHTML = `
+                    <div class="text-2xl font-bold text-gray-500 w-8 text-center">${index + 1}</div>
+                    <div class="flex-grow">
+                        <a class="text-lg font-semibold text-indigo-400 hover:text-indigo-300" href="${anime.url}" target="_blank" rel="noopener noreferrer">${anime.title}</a>
+                        ${caveatHTML}
+                    </div>
+                `;
+                listElement.appendChild(listItem);
+            });
+        }
+
+        function generateAbsoluteGrid() {
+            const container = document.getElementById('absolute-grid-container');
+            if (!container) return;
+            const ranges = Object.values(absoluteListPlacements).filter(p => p.range).flatMap(p => 
+                Array.from({length: p.range[1] - p.range[0] + 1}, (_, i) => p.range[0] + i)
+            );
+
+            for (let i = 1; i <= 100; i++) {
+                const slot = document.createElement('div');
+                // *** FIX: Completed the className string ***
+                slot.className = 'grid-slot bg-gray-800 border border-gray-700 rounded-md aspect-square flex flex-col justify-center items-center p-1 text-center relative';
+                
+                let animeContent = `<span class="font-bold text-gray-500">${i}</span>`;
+
+                if (absoluteListPlacements[i]) {
+                    slot.classList.add('placed');
+                    const anime = absoluteListPlacements[i];
+                    animeContent = `
+                        <span class="absolute top-1 left-1.5 text-xs font-bold text-gray-400">${i}</span>
+                        <a href="${anime.url}" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-gray-100 hover:text-indigo-300 leading-tight">
+                            ${anime.title}
+                        </a>`;
+                } else if (ranges.includes(i)) {
+                    slot.classList.add('range-highlight');
+                }
+                
+                slot.innerHTML = animeContent;
+                container.appendChild(slot);
+            }
+        }
+        
+        function populateKillQuested() {
+            const listElement = document.querySelector('.kill-quested ul');
+            if (!listElement) return;
+            killQuestedData.forEach(anime => {
+                const listItem = document.createElement('li');
+                listItem.innerHTML = `
+                    <a href="${anime.url}" target="_blank" rel="noopener noreferrer" class="block bg-red-900/50 border border-red-800/70 text-gray-300 px-4 py-2 rounded-full hover:bg-red-800/60 text-sm line-through">
+                        ${anime.title}
+                    </a>
+                `;
+                listElement.appendChild(listItem);
+            });
+        }
+
+        function setBanner() {
+            const banner = document.getElementById('update-banner');
+            if (!banner) return;
+            banner.innerHTML = `<strong class="text-gray-200">Last Updated:</strong> ${lastUpdatedDate}<br>
+                                <strong class="text-gray-200">Source:</strong> <a href="${lastEpisodeLink}" target="_blank" rel="noopener noreferrer" class="text-indigo-400 hover:underline">${lastEpisodeTitle}</a>`;
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            setBanner();
+            populateFlattenedList();
+            generateAbsoluteGrid();
+            populateKillQuested();
+        });
+    </script>
+</body>
+</html>
