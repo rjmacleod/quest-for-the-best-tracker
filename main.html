@@ -11,11 +11,17 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
+            color: #F5E3A2; /* light tan font */
+            background-color: #153C4B; /* dark blue background */
         }
         .tab-button.active {
-            background-color: #4f46e5;
-            color: white;
-            border-color: #4f46e5;
+            background-color: #569A9B; /* muted teal */
+            color: #F5E3A2; /* light tan text */
+            border-color: #569A9B;
+        }
+        .tab-button:hover:not(.active) {
+            background-color: #569A9B;
+            color: #F5E3A2;
         }
         .list-content {
             display: none;
@@ -24,30 +30,95 @@
             display: block;
         }
         .grid-slot.placed {
-            background-color: #312e81;
-            border-color: #4f46e5;
+            background-color: #153C4B; /* dark blue */
+            border-color: #569A9B; /* muted teal */
         }
         .grid-slot.range-highlight {
-             background-color: #374151;
+             background-color: #569A9B; /* muted teal */
+        }
+        .accent-color {
+            color: #F5E3A2; /* light tan accent */
+            text-shadow: 2px 2px 0 #2D2A22, -2px -2px 0 #2D2A22, 2px -2px 0 #2D2A22, -2px 2px 0 #2D2A22; /* black outline */
+        }
+        .notes-color {
+            color: #ff7f00; /* orange notes */
+        }
+        .primary-bg {
+            background-color: #569A9B; /* muted teal */
+        }
+        .primary-border {
+            border-color: #569A9B; /* muted teal */
+        }
+        .text-tan {
+            color: #F5E3A2;
+        }
+        .text-dark-blue {
+            color: #153C4B;
+        }
+        .bg-dark-blue {
+            background-color: #153C4B;
+        }
+        .bg-muted-teal {
+            background-color: #569A9B;
+        }
+        .border-muted-teal {
+            border-color: #569A9B;
+        }
+        
+        /* Slider styling */
+        #episode-slider::-webkit-slider-thumb {
+            appearance: none;
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            background: #569A9B; /* muted teal */
+            border: 2px solid #F5E3A2; /* light tan border */
+            cursor: pointer;
+        }
+        
+        #episode-slider::-moz-range-thumb {
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            background: #569A9B; /* muted teal */
+            border: 2px solid #F5E3A2; /* light tan border */
+            cursor: pointer;
+            border: none;
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100">
+<body>
 
     <div class="container mx-auto p-4 md:p-8 max-w-4xl">
 
-        <header class="text-center border-b border-gray-700 pb-6 mb-6">
-            <h1 class="text-4xl md:text-5xl font-bold">Quest for the Best</h1>
-            <p class="text-lg text-gray-400 mt-2">The Unofficial Top 100 Anime List Tracker</p>
-            <div class="update-banner bg-gray-800 border border-gray-700 rounded-lg p-3 mt-6 text-sm max-w-md mx-auto" id="update-banner">
+        <header class="text-center border-b border-muted-teal pb-6 mb-6">
+            <h1 class="text-4xl md:text-5xl font-bold accent-color">Quest for the Best</h1>
+            <p class="text-lg text-tan mt-2">The Unofficial Top 100 Anime List Tracker</p>
+            <div class="update-banner bg-dark-blue border border-muted-teal rounded-lg p-3 mt-6 text-sm max-w-md mx-auto text-tan" id="update-banner">
                 <!-- JS will populate this -->
             </div>
         </header>
 
+        <!-- Episode Selector -->
+        <div class="flex justify-center mb-6">
+            <div class="bg-dark-blue border border-muted-teal rounded-lg p-4 max-w-md w-full">
+                <label for="episode-slider" class="block text-sm font-medium text-tan mb-2">View list after episode:</label>
+                <div class="flex items-center space-x-4">
+                    <input type="range" id="episode-slider" min="1" max="11" value="11" 
+                           class="flex-1 h-2 bg-muted-teal rounded-lg appearance-none cursor-pointer">
+                    <span id="episode-display" class="text-lg font-semibold accent-color w-8 text-center">11</span>
+                </div>
+                <div class="flex justify-between text-xs text-tan mt-1">
+                    <span>Ep 1</span>
+                    <span>Current (Ep 11)</span>
+                </div>
+            </div>
+        </div>
+
         <nav class="flex justify-center mb-8">
-            <div class="flex rounded-lg border border-gray-700">
-                <button class="tab-button active text-white py-2 px-6 rounded-l-lg focus:outline-none" onclick="showList('flattened-list')">Flattened List</button>
-                <button class="tab-button text-white py-2 px-6 rounded-r-lg focus:outline-none border-l border-gray-700" onclick="showList('absolute-list')">Absolute List</button>
+            <div class="flex rounded-lg border border-muted-teal">
+                <button class="tab-button active text-tan py-2 px-6 rounded-l-lg focus:outline-none" onclick="showList('flattened-list')">Flattened List</button>
+                <button class="tab-button text-tan py-2 px-6 rounded-r-lg focus:outline-none border-l border-muted-teal" onclick="showList('absolute-list')">Absolute List</button>
             </div>
         </nav>
 
@@ -67,8 +138,8 @@
             </div>
 
             <!-- Kill-Quested Section -->
-            <div class="kill-quested mt-12 pt-6 border-t border-gray-700">
-                <h2 class="text-2xl font-bold text-center mb-4">Kill-Quested</h2>
+            <div class="kill-quested mt-12 pt-6 border-t border-muted-teal">
+                <h2 class="text-2xl font-bold text-center mb-4 accent-color">Kill-Quested</h2>
                 <ul class="flex justify-center gap-4 flex-wrap">
                     <!-- JS will populate this -->
                 </ul>
@@ -78,44 +149,206 @@
 
     <script>
         // --- DATA ---
-        const lastUpdatedDate = 'July 17, 2025';
-        const lastEpisodeLink = 'https://www.youtube.com/watch?v=mIrO94FXJRk';
-        const lastEpisodeTitle = 'THE TOP 100 BEST ANIME OF ALL TIME GAUNTLET BEGINS';
-
-        const flattenedListData = [
-            { title: 'Baccano!', url: 'https://anilist.co/anime/2251/Baccano/', caveat: null },
-            { title: 'Patlabor', url: 'https://anilist.co/anime/324/Mobile-Police-Patlabor-ON-TELEVISION/', caveat: 'Note: All entries combined.' },
-            { title: 'Re:ZERO', url: 'https://anilist.co/anime/21355/ReZERO-Starting-Life-in-Another-World/', caveat: 'Caveat: Expected Top 10-15. Could move higher.' },
-            { title: 'Frieren: Beyond Journey\'s End', url: 'https://anilist.co/anime/154587/Frieren-Beyond-Journeys-End/', caveat: 'Caveat: Tentatively placed in the late teens/early 20s.' },
-            { title: 'Delicious in Dungeon', url: 'https://anilist.co/anime/153518/Delicious-in-Dungeon/', caveat: 'Caveat: Tentatively placed in the late teens/early 20s.' },
-            { title: 'Princess Mononoke', url: 'https://anilist.co/anime/164/Princess-Mononoke/', caveat: 'Caveat: Tentatively placed in the 30s.' },
-            { title: 'Royal Space Force', url: 'https://anilist.co/anime/1034/Royal-Space-Force-The-Wings-of-Honnamise/', caveat: null },
-            { title: 'KonoSuba', url: 'https://anilist.co/anime/21202/KONOSUBA-Gods-blessing-on-this-wonderful-world/', caveat: 'Note: All seasons and movie combined.' },
-            { title: 'Vampire Hunter D: Bloodlust', url: 'https://anilist.co/anime/543/Vampire-Hunter-D-Bloodlust/', caveat: null },
-            { title: 'Akudama Drive', url: 'https://anilist.co/anime/116566/Akudama-Drive/', caveat: null },
-            { title: 'Cromartie High School', url: 'https://anilist.co/anime/114/Cromartie-High-School/', caveat: null },
-        ];
-
-        const absoluteListPlacements = {
-            1: { title: 'Baccano!', url: 'https://anilist.co/anime/2251/Baccano/' },
-            2: { title: 'Patlabor', url: 'https://anilist.co/anime/324/Mobile-Police-Patlabor-ON-TELEVISION/' },
-            13: { title: 'Re:Zero', url: 'https://anilist.co/anime/21355/ReZERO-Starting-Life-in-Another-World/', range: [10, 15] },
-            19: { title: 'Frieren', url: 'https://anilist.co/anime/154587/Frieren-Beyond-Journeys-End/', range: [16, 25] },
-            20: { title: 'Dungeon Meshi', url: 'https://anilist.co/anime/153518/Delicious-in-Dungeon/', range: [16, 25] },
-            35: { title: 'P. Mononoke', url: 'https://anilist.co/anime/164/Princess-Mononoke/', range: [30, 40] },
-            50: { title: 'Royal Space Force', url: 'https://anilist.co/anime/1034/Royal-Space-Force-The-Wings-of-Honnamise/' },
-            51: { title: 'KonoSuba', url: 'https://anilist.co/anime/21202/KONOSUBA-Gods-blessing-on-this-wonderful-world/' },
-            52: { title: 'Vampire Hunter D', url: 'https://anilist.co/anime/543/Vampire-Hunter-D-Bloodlust/' },
-            53: { title: 'Akudama Drive', url: 'https://anilist.co/anime/116566/Akudama-Drive/' },
-            54: { title: 'Cromartie High', url: 'https://anilist.co/anime/114/Cromartie-High-School/' },
-        };
-
-        const killQuestedData = [
-            { title: 'Your Name', url: 'https://anilist.co/anime/21519/Your-Name/' },
-            { title: 'Solo Leveling', url: 'https://anilist.co/anime/151807/Solo-Leveling/' },
-        ];
+        let episodesData = null;
+        let currentEpisodeNumber = 11;
+        let animeImageCache = new Map(); // Cache for AniList images
         
+        // Default episode link (will be updated when episode data loads)
+        const lastEpisodeLink = 'https://www.youtube.com/watch?v=mIrO94FXJRk';
+
+        // Load episode data from JSON file
+        async function loadEpisodesData() {
+            try {
+                const response = await fetch('./episodes-data.json');
+                if (!response.ok) throw new Error('Failed to load episodes data');
+                episodesData = await response.json();
+                currentEpisodeNumber = episodesData.currentEpisode;
+                
+                // Update slider max value
+                const slider = document.getElementById('episode-slider');
+                if (slider) {
+                    slider.max = currentEpisodeNumber;
+                    slider.value = currentEpisodeNumber;
+                }
+                
+                // Update display
+                updateEpisodeDisplay();
+                updateListsForEpisode(currentEpisodeNumber);
+                setBanner();
+            } catch (error) {
+                console.error('Error loading episodes data:', error);
+                // Fallback to hardcoded data if JSON fails to load
+                useFallbackData();
+            }
+        }
+
+        function useFallbackData() {
+            // Fallback data structure
+            episodesData = {
+                episodes: [{
+                    episodeNumber: 10,
+                    title: 'THE TOP 100 BEST ANIME OF ALL TIME GAUNTLET BEGINS',
+                    date: '2025-07-17',
+                    flattenedList: [
+                        { title: 'Baccano!', url: 'https://anilist.co/anime/2251/Baccano/', caveat: null },
+                        { title: 'Patlabor', url: 'https://anilist.co/anime/324/Mobile-Police-Patlabor-ON-TELEVISION/', caveat: 'Note: All entries combined.' },
+                        { title: 'Re:ZERO', url: 'https://anilist.co/anime/21355/ReZERO-Starting-Life-in-Another-World/', caveat: 'Caveat: Expected Top 10-15. Could move higher.' },
+                        { title: 'Frieren: Beyond Journey\'s End', url: 'https://anilist.co/anime/154587/Frieren-Beyond-Journeys-End/', caveat: 'Caveat: Tentatively placed in the late teens/early 20s.' },
+                        { title: 'Delicious in Dungeon', url: 'https://anilist.co/anime/153518/Delicious-in-Dungeon/', caveat: 'Caveat: Tentatively placed in the late teens/early 20s.' },
+                        { title: 'Princess Mononoke', url: 'https://anilist.co/anime/164/Princess-Mononoke/', caveat: 'Caveat: Tentatively placed in the 30s.' },
+                        { title: 'Royal Space Force', url: 'https://anilist.co/anime/1034/Royal-Space-Force-The-Wings-of-Honnamise/', caveat: null },
+                        { title: 'KonoSuba', url: 'https://anilist.co/anime/21202/KONOSUBA-Gods-blessing-on-this-wonderful-world/', caveat: 'Note: All seasons and movie combined.' },
+                        { title: 'Vampire Hunter D: Bloodlust', url: 'https://anilist.co/anime/543/Vampire-Hunter-D-Bloodlust/', caveat: null },
+                        { title: 'Akudama Drive', url: 'https://anilist.co/anime/116566/Akudama-Drive/', caveat: null },
+                        { title: 'Cromartie High School', url: 'https://anilist.co/anime/114/Cromartie-High-School/', caveat: null }
+                    ],
+                    absoluteList: {
+                        1: { title: 'Baccano!', url: 'https://anilist.co/anime/2251/Baccano/' },
+                        2: { title: 'Patlabor', url: 'https://anilist.co/anime/324/Mobile-Police-Patlabor-ON-TELEVISION/' },
+                        13: { title: 'Re:Zero', url: 'https://anilist.co/anime/21355/ReZERO-Starting-Life-in-Another-World/', range: [10, 15] },
+                        19: { title: 'Frieren', url: 'https://anilist.co/anime/154587/Frieren-Beyond-Journeys-End/', range: [16, 25] },
+                        20: { title: 'Dungeon Meshi', url: 'https://anilist.co/anime/153518/Delicious-in-Dungeon/', range: [16, 25] },
+                        35: { title: 'P. Mononoke', url: 'https://anilist.co/anime/164/Princess-Mononoke/', range: [30, 40] },
+                        50: { title: 'Royal Space Force', url: 'https://anilist.co/anime/1034/Royal-Space-Force-The-Wings-of-Honnamise/' },
+                        51: { title: 'KonoSuba', url: 'https://anilist.co/anime/21202/KONOSUBA-Gods-blessing-on-this-wonderful-world/' },
+                        52: { title: 'Vampire Hunter D', url: 'https://anilist.co/anime/543/Vampire-Hunter-D-Bloodlust/' },
+                        53: { title: 'Akudama Drive', url: 'https://anilist.co/anime/116566/Akudama-Drive/' },
+                        54: { title: 'Cromartie High', url: 'https://anilist.co/anime/114/Cromartie-High-School/' }
+                    },
+                    killQuested: [
+                        { title: 'Your Name', url: 'https://anilist.co/anime/21519/Your-Name/' },
+                        { title: 'Solo Leveling', url: 'https://anilist.co/anime/151807/Solo-Leveling/' }
+                    ]
+                }],
+                currentEpisode: 10,
+                lastUpdated: '2025-07-17'
+            };
+            updateListsForEpisode(10);
+        }
+        
+        // --- ANILIST API FUNCTIONS ---
+
+        function extractAniListId(url) {
+            const match = url.match(/anilist\.co\/anime\/(\d+)/);
+            return match ? parseInt(match[1]) : null;
+        }
+
+        async function fetchAnimeImages(ids) {
+            if (ids.length === 0) return {};
+            
+            // Check cache first
+            const uncachedIds = ids.filter(id => !animeImageCache.has(id));
+            
+            if (uncachedIds.length > 0) {
+                try {
+                    // Create GraphQL query with aliases for multiple IDs
+                    const aliases = uncachedIds.map((id, index) => 
+                        `anime${index}: Media(id: ${id}) { 
+                            id 
+                            coverImage { 
+                                large 
+                                color 
+                            }
+                            bannerImage
+                        }`
+                    ).join('\n');
+                    
+                    const query = `query { ${aliases} }`;
+                    
+                    const response = await fetch('https://graphql.anilist.co', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ query })
+                    });
+                    
+                    if (!response.ok) throw new Error('AniList API error');
+                    
+                    const data = await response.json();
+                    
+                    // Cache the results
+                    uncachedIds.forEach((id, index) => {
+                        const animeData = data.data[`anime${index}`];
+                        if (animeData) {
+                            animeImageCache.set(id, {
+                                coverImage: animeData.coverImage.large,
+                                bannerImage: animeData.bannerImage,
+                                color: animeData.coverImage.color
+                            });
+                        }
+                    });
+                } catch (error) {
+                    console.error('Error fetching anime images:', error);
+                }
+            }
+            
+            // Return cached results
+            const result = {};
+            ids.forEach(id => {
+                if (animeImageCache.has(id)) {
+                    result[id] = animeImageCache.get(id);
+                }
+            });
+            return result;
+        }
+
         // --- FUNCTIONS ---
+
+        function getCurrentEpisodeData() {
+            if (!episodesData) return null;
+            return episodesData.episodes.find(ep => ep.episodeNumber === currentEpisodeNumber);
+        }
+
+        function updateEpisodeDisplay() {
+            const display = document.getElementById('episode-display');
+            if (display) {
+                display.textContent = currentEpisodeNumber;
+            }
+        }
+
+        async function updateListsForEpisode(episodeNum) {
+            currentEpisodeNumber = episodeNum;
+            updateEpisodeDisplay();
+            
+            const episodeData = episodesData?.episodes.find(ep => ep.episodeNumber === episodeNum);
+            if (!episodeData) return;
+            
+            // Extract all AniList IDs from the episode data
+            const allAnime = [
+                ...episodeData.flattenedList,
+                ...Object.values(episodeData.absoluteList),
+                ...episodeData.killQuested
+            ];
+            
+            const anilistIds = allAnime
+                .map(anime => extractAniListId(anime.url))
+                .filter(id => id !== null);
+            
+            // Fetch images for all anime in this episode
+            const images = await fetchAnimeImages(anilistIds);
+            
+            // Clear existing content
+            clearLists();
+            
+            // Populate with episode-specific data and images
+            populateFlattenedList(episodeData.flattenedList, images);
+            generateAbsoluteGrid(episodeData.absoluteList, images);
+            populateKillQuested(episodeData.killQuested, images);
+        }
+
+        function clearLists() {
+            const flattenedList = document.querySelector('#flattened-list ol');
+            const absoluteGrid = document.getElementById('absolute-grid-container');
+            const killQuestedList = document.querySelector('.kill-quested ul');
+            
+            if (flattenedList) flattenedList.innerHTML = '';
+            if (absoluteGrid) absoluteGrid.innerHTML = '';
+            if (killQuestedList) killQuestedList.innerHTML = '';
+        }
+
+        function onEpisodeSliderChange(event) {
+            const episodeNum = parseInt(event.target.value);
+            updateListsForEpisode(episodeNum);
+        }
 
         function showList(listId) {
             document.querySelectorAll('.list-content').forEach(content => content.classList.remove('active'));
@@ -124,53 +357,88 @@
             document.querySelector(`button[onclick="showList('${listId}')"]`).classList.add('active');
         }
         
-        function populateFlattenedList() {
+        function populateFlattenedList(data = [], images = {}) {
             const listElement = document.querySelector('#flattened-list ol');
             if (!listElement) return;
-            flattenedListData.forEach((anime, index) => {
+            
+            data.forEach((anime, index) => {
                 const listItem = document.createElement('li');
-                listItem.className = 'bg-gray-800 border border-gray-700 rounded-lg p-4 flex items-center space-x-4';
+                listItem.className = 'border border-muted-teal rounded-lg overflow-hidden relative';
+                listItem.style.height = '120px'; // Set a fixed height for consistency
                 
                 let caveatHTML = '';
                 if (anime.caveat) {
-                    caveatHTML = `<p class="text-xs text-gray-400 italic mt-1">${anime.caveat}</p>`;
+                    caveatHTML = `<p class="text-xs notes-color italic mt-1">${anime.caveat}</p>`;
+                }
+
+                const anilistId = extractAniListId(anime.url);
+                const imageData = images[anilistId];
+                
+                let backgroundStyle = 'background-color: #153C4B;'; // dark blue fallback
+                if (imageData) {
+                    // Prefer banner image for better aspect ratio, fallback to cover image
+                    const imageUrl = imageData.bannerImage || imageData.coverImage;
+                    if (imageUrl) {
+                        backgroundStyle = `background-image: url('${imageUrl}'); background-size: cover; background-position: center;`;
+                    }
                 }
 
                 listItem.innerHTML = `
-                    <div class="text-2xl font-bold text-gray-500 w-8 text-center">${index + 1}</div>
-                    <div class="flex-grow">
-                        <a class="text-lg font-semibold text-indigo-400 hover:text-indigo-300" href="${anime.url}" target="_blank" rel="noopener noreferrer">${anime.title}</a>
-                        ${caveatHTML}
+                    <div class="absolute inset-0" style="${backgroundStyle}"></div>
+                    <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-transparent"></div>
+                    <div class="relative z-10 p-4 h-full flex items-center space-x-4">
+                        <div class="text-3xl font-bold accent-color w-12 text-center">${index + 1}</div>
+                        <div class="flex-grow">
+                            <a class="text-xl font-semibold text-tan hover:opacity-80 block" href="${anime.url}" target="_blank" rel="noopener noreferrer">${anime.title}</a>
+                            ${caveatHTML}
+                        </div>
                     </div>
                 `;
                 listElement.appendChild(listItem);
             });
         }
 
-        function generateAbsoluteGrid() {
+        function generateAbsoluteGrid(data = {}, images = {}) {
             const container = document.getElementById('absolute-grid-container');
             if (!container) return;
-            const ranges = Object.values(absoluteListPlacements).filter(p => p.range).flatMap(p => 
+            
+            const ranges = Object.values(data).filter(p => p.range).flatMap(p => 
                 Array.from({length: p.range[1] - p.range[0] + 1}, (_, i) => p.range[0] + i)
             );
 
             for (let i = 1; i <= 100; i++) {
                 const slot = document.createElement('div');
-                // *** FIX: Completed the className string ***
-                slot.className = 'grid-slot bg-gray-800 border border-gray-700 rounded-md aspect-square flex flex-col justify-center items-center p-1 text-center relative';
+                slot.className = 'grid-slot border rounded-md aspect-square flex flex-col justify-center items-center p-1 text-center relative overflow-hidden';
+                slot.style.backgroundColor = '#2D2A22'; // dark brown/black for empty slots
+                slot.style.borderColor = '#569A9B'; // muted teal border
+                slot.style.color = '#569A9B'; // muted teal text
                 
-                let animeContent = `<span class="font-bold text-gray-500">${i}</span>`;
+                let animeContent = `<span class="font-bold">${i}</span>`;
 
-                if (absoluteListPlacements[i]) {
+                if (data[i]) {
                     slot.classList.add('placed');
-                    const anime = absoluteListPlacements[i];
-                    animeContent = `
-                        <span class="absolute top-1 left-1.5 text-xs font-bold text-gray-400">${i}</span>
-                        <a href="${anime.url}" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-gray-100 hover:text-indigo-300 leading-tight">
-                            ${anime.title}
-                        </a>`;
+                    const anime = data[i];
+                    const anilistId = extractAniListId(anime.url);
+                    const imageData = images[anilistId];
+                    
+                    if (imageData && imageData.coverImage) {
+                        animeContent = `
+                            <img src="${imageData.coverImage}" alt="${anime.title}" class="absolute inset-0 w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/60"></div>
+                            <span class="absolute top-1 left-1.5 text-xs font-bold z-10" style="color: #F5E3A2">${i}</span>
+                            <a href="${anime.url}" target="_blank" rel="noopener noreferrer" class="absolute bottom-1 left-1 right-1 text-xs font-semibold leading-tight hover:opacity-80 z-10" style="color: #F5E3A2">
+                                ${anime.title}
+                            </a>`;
+                    } else {
+                        animeContent = `
+                            <span class="absolute top-1 left-1.5 text-xs font-bold" style="color: #F5E3A2">${i}</span>
+                            <a href="${anime.url}" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold leading-tight hover:opacity-80" style="color: #F5E3A2">
+                                ${anime.title}
+                            </a>`;
+                    }
                 } else if (ranges.includes(i)) {
                     slot.classList.add('range-highlight');
+                    slot.style.color = '#F5E3A2'; // tan text for range highlights
                 }
                 
                 slot.innerHTML = animeContent;
@@ -178,13 +446,23 @@
             }
         }
         
-        function populateKillQuested() {
+        function populateKillQuested(data = [], images = {}) {
             const listElement = document.querySelector('.kill-quested ul');
             if (!listElement) return;
-            killQuestedData.forEach(anime => {
+            
+            data.forEach(anime => {
                 const listItem = document.createElement('li');
+                const anilistId = extractAniListId(anime.url);
+                const imageData = images[anilistId];
+                
+                let imageHTML = '';
+                if (imageData && imageData.coverImage) {
+                    imageHTML = `<img src="${imageData.coverImage}" alt="${anime.title}" class="w-8 h-10 object-cover rounded mr-2 opacity-50">`;
+                }
+                
                 listItem.innerHTML = `
-                    <a href="${anime.url}" target="_blank" rel="noopener noreferrer" class="block bg-red-900/50 border border-red-800/70 text-gray-300 px-4 py-2 rounded-full hover:bg-red-800/60 text-sm line-through">
+                    <a href="${anime.url}" target="_blank" rel="noopener noreferrer" class="flex items-center bg-red-900/50 border border-red-800/70 text-gray-300 px-4 py-2 rounded-full hover:bg-red-800/60 text-sm line-through">
+                        ${imageHTML}
                         ${anime.title}
                     </a>
                 `;
@@ -195,15 +473,25 @@
         function setBanner() {
             const banner = document.getElementById('update-banner');
             if (!banner) return;
-            banner.innerHTML = `<strong class="text-gray-200">Last Updated:</strong> ${lastUpdatedDate}<br>
-                                <strong class="text-gray-200">Source:</strong> <a href="${lastEpisodeLink}" target="_blank" rel="noopener noreferrer" class="text-indigo-400 hover:underline">${lastEpisodeTitle}</a>`;
+            
+            const currentEpisode = getCurrentEpisodeData();
+            const lastUpdated = episodesData?.lastUpdated || '2025-07-17';
+            const episodeTitle = currentEpisode?.title || 'THE TOP 100 BEST ANIME OF ALL TIME GAUNTLET BEGINS';
+            const episodeUrl = currentEpisode?.url || lastEpisodeLink;
+            
+            banner.innerHTML = `<strong>Last Updated:</strong> ${lastUpdated}<br>
+                                <strong>Source:</strong> <a href="${episodeUrl}" target="_blank" rel="noopener noreferrer" class="hover:underline" style="color: #569A9B">${episodeTitle}</a>`;
         }
 
         document.addEventListener('DOMContentLoaded', () => {
-            setBanner();
-            populateFlattenedList();
-            generateAbsoluteGrid();
-            populateKillQuested();
+            // Add event listener for episode slider
+            const slider = document.getElementById('episode-slider');
+            if (slider) {
+                slider.addEventListener('input', onEpisodeSliderChange);
+            }
+            
+            // Load data and initialize
+            loadEpisodesData();
         });
     </script>
 </body>

@@ -1,0 +1,621 @@
+{
+  "episodes": [
+    {
+      "episodeNumber": 1,
+      "title": "UPON JOURNEY'S START | #Frieren #SoloLeveling | Quest 001",
+      "date": "2025-05-04",
+      "url": "https://www.youtube.com/watch?v=V7-dzt-5-ak",
+      "flattenedList": [
+        {
+          "title": "Frieren: Beyond Journey's End",
+          "url": "https://anilist.co/anime/154587/Frieren-Beyond-Journeys-End/",
+          "caveat": null
+        }
+      ],
+      "absoluteList": {},
+      "killQuested": [
+        {
+          "title": "Solo Leveling",
+          "url": "https://anilist.co/anime/151807/Solo-Leveling/",
+          "caveat": null
+        }
+      ]
+    },
+    {
+      "episodeNumber": 2,
+      "title": "OF DRONES AND DREAMS | #Patlabor #Avowed | Quest 002",
+      "date": "2025-05-12",
+      "url": "https://www.youtube.com/watch?v=N8Bf83aEaVA",
+      "flattenedList": [
+        {
+          "title": "Patlabor",
+          "url": "https://anilist.co/anime/324/Mobile-Police-Patlabor-ON-TELEVISION/",
+          "caveat": "Note: All entries combined."
+        },
+        {
+          "title": "Frieren: Beyond Journey's End",
+          "url": "https://anilist.co/anime/154587/Frieren-Beyond-Journeys-End/",
+          "caveat": null
+        }
+      ],
+      "absoluteList": {},
+      "killQuested": [
+        {
+          "title": "Solo Leveling",
+          "url": "https://anilist.co/anime/151807/Solo-Leveling/",
+          "caveat": null
+        }
+      ]
+    },
+    {
+      "episodeNumber": 3,
+      "title": "GenkiFellas | #BACCANO | Quest 003",
+      "date": "2025-05-19",
+      "url": "https://www.youtube.com/watch?v=A4b94k3wz6M",
+      "flattenedList": [
+        {
+          "title": "Baccano!",
+          "url": "https://anilist.co/anime/2251/Baccano/",
+          "caveat": null
+        },
+        {
+          "title": "Patlabor",
+          "url": "https://anilist.co/anime/324/Mobile-Police-Patlabor-ON-TELEVISION/",
+          "caveat": "Note: All entries combined."
+        },
+        {
+          "title": "Frieren: Beyond Journey's End",
+          "url": "https://anilist.co/anime/154587/Frieren-Beyond-Journeys-End/",
+          "caveat": null
+        }
+      ],
+      "absoluteList": {},
+      "killQuested": [
+        {
+          "title": "Solo Leveling",
+          "url": "https://anilist.co/anime/151807/Solo-Leveling/",
+          "caveat": null
+        }
+      ]
+    },
+    {
+      "episodeNumber": 4,
+      "title": "T-KO, M-KO, & G-KO | #ProjectAKO | Quest 004",
+      "date": "2025-05-26",
+      "url": "https://www.youtube.com/watch?v=t6AfCo4-A-I",
+      "flattenedList": [
+        {
+          "title": "Baccano!",
+          "url": "https://anilist.co/anime/2251/Baccano/",
+          "caveat": null
+        },
+        {
+          "title": "Patlabor",
+          "url": "https://anilist.co/anime/324/Mobile-Police-Patlabor-ON-TELEVISION/",
+          "caveat": "Note: All entries combined."
+        },
+        {
+          "title": "Frieren: Beyond Journey's End",
+          "url": "https://anilist.co/anime/154587/Frieren-Beyond-Journeys-End/",
+          "caveat": null
+        },
+        {
+          "title": "Project A-ko",
+          "url": "https://anilist.co/anime/212/Project-Ako/",
+          "caveat": null
+        }
+      ],
+      "absoluteList": {},
+      "killQuested": [
+        {
+          "title": "Solo Leveling",
+          "url": "https://anilist.co/anime/151807/Solo-Leveling/",
+          "caveat": null
+        }
+      ]
+    },
+    {
+      "episodeNumber": 5,
+      "title": "OH, DUNGEON MESHI | #DungeonMeshi #YourName | Quest 005",
+      "date": "2025-06-02",
+      "url": "https://www.youtube.com/watch?v=j_Uj_3-4-3I",
+      "flattenedList": [
+        {
+          "title": "Baccano!",
+          "url": "https://anilist.co/anime/2251/Baccano/",
+          "caveat": null
+        },
+        {
+          "title": "Patlabor",
+          "url": "https://anilist.co/anime/324/Mobile-Police-Patlabor-ON-TELEVISION/",
+          "caveat": "Note: All entries combined."
+        },
+        {
+          "title": "Frieren: Beyond Journey's End",
+          "url": "https://anilist.co/anime/154587/Frieren-Beyond-Journeys-End/",
+          "caveat": null
+        },
+        {
+          "title": "Delicious in Dungeon",
+          "url": "https://anilist.co/anime/153518/Delicious-in-Dungeon/",
+          "caveat": null
+        },
+        {
+          "title": "Project A-ko",
+          "url": "https://anilist.co/anime/212/Project-Ako/",
+          "caveat": null
+        }
+      ],
+      "absoluteList": {},
+      "killQuested": [
+        {
+          "title": "Solo Leveling",
+          "url": "https://anilist.co/anime/151807/Solo-Leveling/",
+          "caveat": null
+        },
+        {
+          "title": "Your Name",
+          "url": "https://anilist.co/anime/21519/Your-Name/",
+          "caveat": null
+        }
+      ]
+    },
+    {
+      "episodeNumber": 6,
+      "title": "A Very 'Hell Yeah' Movie | #RoyalSpaceForce | Quest 006",
+      "date": "2025-06-09",
+      "url": "https://www.youtube.com/watch?v=9y926g-J8-I",
+      "flattenedList": [
+        {
+          "title": "Baccano!",
+          "url": "https://anilist.co/anime/2251/Baccano/",
+          "caveat": null
+        },
+        {
+          "title": "Patlabor",
+          "url": "https://anilist.co/anime/324/Mobile-Police-Patlabor-ON-TELEVISION/",
+          "caveat": "Note: All entries combined."
+        },
+        {
+          "title": "Frieren: Beyond Journey's End",
+          "url": "https://anilist.co/anime/154587/Frieren-Beyond-Journeys-End/",
+          "caveat": null
+        },
+        {
+          "title": "Delicious in Dungeon",
+          "url": "https://anilist.co/anime/153518/Delicious-in-Dungeon/",
+          "caveat": null
+        },
+        {
+          "title": "Royal Space Force",
+          "url": "https://anilist.co/anime/1034/Royal-Space-Force-The-Wings-of-Honnamise/",
+          "caveat": null
+        },
+        {
+          "title": "Project A-ko",
+          "url": "https://anilist.co/anime/212/Project-Ako/",
+          "caveat": null
+        }
+      ],
+      "absoluteList": {},
+      "killQuested": [
+        {
+          "title": "Solo Leveling",
+          "url": "https://anilist.co/anime/151807/Solo-Leveling/",
+          "caveat": null
+        },
+        {
+          "title": "Your Name",
+          "url": "https://anilist.co/anime/21519/Your-Name/",
+          "caveat": null
+        }
+      ]
+    },
+    {
+      "episodeNumber": 7,
+      "title": "Eyes Unclouded By Nostalgia | #PrincessMononoke | Quest 007",
+      "date": "2025-06-16",
+      "url": "https://www.youtube.com/watch?v=N-K2s-a-L4E",
+      "flattenedList": [
+        {
+          "title": "Baccano!",
+          "url": "https://anilist.co/anime/2251/Baccano/",
+          "caveat": null
+        },
+        {
+          "title": "Patlabor",
+          "url": "https://anilist.co/anime/324/Mobile-Police-Patlabor-ON-TELEVISION/",
+          "caveat": "Note: All entries combined."
+        },
+        {
+          "title": "Frieren: Beyond Journey's End",
+          "url": "https://anilist.co/anime/154587/Frieren-Beyond-Journeys-End/",
+          "caveat": null
+        },
+        {
+          "title": "Delicious in Dungeon",
+          "url": "https://anilist.co/anime/153518/Delicious-in-Dungeon/",
+          "caveat": null
+        },
+        {
+          "title": "Princess Mononoke",
+          "url": "https://anilist.co/anime/164/Princess-Mononoke/",
+          "caveat": null
+        },
+        {
+          "title": "Royal Space Force",
+          "url": "https://anilist.co/anime/1034/Royal-Space-Force-The-Wings-of-Honnamise/",
+          "caveat": null
+        },
+        {
+          "title": "Project A-ko",
+          "url": "https://anilist.co/anime/212/Project-Ako/",
+          "caveat": null
+        }
+      ],
+      "absoluteList": {},
+      "killQuested": [
+        {
+          "title": "Solo Leveling",
+          "url": "https://anilist.co/anime/151807/Solo-Leveling/",
+          "caveat": null
+        },
+        {
+          "title": "Your Name",
+          "url": "https://anilist.co/anime/21519/Your-Name/",
+          "caveat": null
+        }
+      ]
+    },
+    {
+      "episodeNumber": 8,
+      "title": "Isekai To Die For | #ReZero | Quest 008",
+      "date": "2025-06-23",
+      "url": "https://www.youtube.com/watch?v=S-T4e3tZ8jY",
+      "flattenedList": [
+        {
+          "title": "Baccano!",
+          "url": "https://anilist.co/anime/2251/Baccano/",
+          "caveat": null
+        },
+        {
+          "title": "Patlabor",
+          "url": "https://anilist.co/anime/324/Mobile-Police-Patlabor-ON-TELEVISION/",
+          "caveat": "Note: All entries combined."
+        },
+        {
+          "title": "Re:ZERO",
+          "url": "https://anilist.co/anime/21355/ReZERO-Starting-Life-in-Another-World/",
+          "caveat": null
+        },
+        {
+          "title": "Frieren: Beyond Journey's End",
+          "url": "https://anilist.co/anime/154587/Frieren-Beyond-Journeys-End/",
+          "caveat": null
+        },
+        {
+          "title": "Delicious in Dungeon",
+          "url": "https://anilist.co/anime/153518/Delicious-in-Dungeon/",
+          "caveat": null
+        },
+        {
+          "title": "Princess Mononoke",
+          "url": "https://anilist.co/anime/164/Princess-Mononoke/",
+          "caveat": null
+        },
+        {
+          "title": "Royal Space Force",
+          "url": "https://anilist.co/anime/1034/Royal-Space-Force-The-Wings-of-Honnamise/",
+          "caveat": null
+        },
+        {
+          "title": "Project A-ko",
+          "url": "https://anilist.co/anime/212/Project-Ako/",
+          "caveat": null
+        }
+      ],
+      "absoluteList": {},
+      "killQuested": [
+        {
+          "title": "Solo Leveling",
+          "url": "https://anilist.co/anime/151807/Solo-Leveling/",
+          "caveat": null
+        },
+        {
+          "title": "Your Name",
+          "url": "https://anilist.co/anime/21519/Your-Name/",
+          "caveat": null
+        }
+      ]
+    },
+    {
+      "episodeNumber": 9,
+      "title": "He Ate My Pencil | #Cromartie #OnePunchMan | Quest 009",
+      "date": "2025-06-30",
+      "url": "https://www.youtube.com/watch?v=Yq6k4Y-k-Yc",
+      "flattenedList": [
+        {
+          "title": "Baccano!",
+          "url": "https://anilist.co/anime/2251/Baccano/",
+          "caveat": null
+        },
+        {
+          "title": "Patlabor",
+          "url": "https://anilist.co/anime/324/Mobile-Police-Patlabor-ON-TELEVISION/",
+          "caveat": "Note: All entries combined."
+        },
+        {
+          "title": "Re:ZERO",
+          "url": "https://anilist.co/anime/21355/ReZERO-Starting-Life-in-Another-World/",
+          "caveat": null
+        },
+        {
+          "title": "Frieren: Beyond Journey's End",
+          "url": "https://anilist.co/anime/154587/Frieren-Beyond-Journeys-End/",
+          "caveat": null
+        },
+        {
+          "title": "Delicious in Dungeon",
+          "url": "https://anilist.co/anime/153518/Delicious-in-Dungeon/",
+          "caveat": null
+        },
+        {
+          "title": "Princess Mononoke",
+          "url": "https://anilist.co/anime/164/Princess-Mononoke/",
+          "caveat": null
+        },
+        {
+          "title": "Royal Space Force",
+          "url": "https://anilist.co/anime/1034/Royal-Space-Force-The-Wings-of-Honnamise/",
+          "caveat": null
+        },
+        {
+          "title": "Project A-ko",
+          "url": "https://anilist.co/anime/212/Project-Ako/",
+          "caveat": null
+        },
+        {
+          "title": "Cromartie High School",
+          "url": "https://anilist.co/anime/114/Cromartie-High-School/",
+          "caveat": null
+        }
+      ],
+      "absoluteList": {},
+      "killQuested": [
+        {
+          "title": "Solo Leveling",
+          "url": "https://anilist.co/anime/151807/Solo-Leveling/",
+          "caveat": null
+        },
+        {
+          "title": "Your Name",
+          "url": "https://anilist.co/anime/21519/Your-Name/",
+          "caveat": null
+        }
+      ]
+    },
+    {
+      "episodeNumber": 10,
+      "title": "SungWon Cho's Favourite Anime | #chihayafuru #prozd | Quest 010",
+      "date": "2025-07-07",
+      "url": "https://www.youtube.com/watch?v=L9r-Brgr-A4",
+      "flattenedList": [
+        {
+          "title": "Baccano!",
+          "url": "https://anilist.co/anime/2251/Baccano/",
+          "caveat": null
+        },
+        {
+          "title": "Patlabor",
+          "url": "https://anilist.co/anime/324/Mobile-Police-Patlabor-ON-TELEVISION/",
+          "caveat": "Note: All entries combined."
+        },
+        {
+          "title": "Re:ZERO",
+          "url": "https://anilist.co/anime/21355/ReZERO-Starting-Life-in-Another-World/",
+          "caveat": null
+        },
+        {
+          "title": "Chihayafuru",
+          "url": "https://anilist.co/anime/10800/Chihayafuru/",
+          "caveat": null
+        },
+        {
+          "title": "Frieren: Beyond Journey's End",
+          "url": "https://anilist.co/anime/154587/Frieren-Beyond-Journeys-End/",
+          "caveat": null
+        },
+        {
+          "title": "Delicious in Dungeon",
+          "url": "https://anilist.co/anime/153518/Delicious-in-Dungeon/",
+          "caveat": null
+        },
+        {
+          "title": "Princess Mononoke",
+          "url": "https://anilist.co/anime/164/Princess-Mononoke/",
+          "caveat": null
+        },
+        {
+          "title": "Royal Space Force",
+          "url": "https://anilist.co/anime/1034/Royal-Space-Force-The-Wings-of-Honnamise/",
+          "caveat": null
+        },
+        {
+          "title": "Project A-ko",
+          "url": "https://anilist.co/anime/212/Project-Ako/",
+          "caveat": null
+        },
+        {
+          "title": "Cromartie High School",
+          "url": "https://anilist.co/anime/114/Cromartie-High-School/",
+          "caveat": null
+        }
+      ],
+      "absoluteList": {},
+      "killQuested": [
+        {
+          "title": "Solo Leveling",
+          "url": "https://anilist.co/anime/151807/Solo-Leveling/",
+          "caveat": null
+        },
+        {
+          "title": "Your Name",
+          "url": "https://anilist.co/anime/21519/Your-Name/",
+          "caveat": null
+        }
+      ]
+    },
+    {
+      "episodeNumber": 11,
+      "title": "The Gang Does KonoSuba | #Konosuba | Quest 011",
+      "date": "2025-07-14",
+      "url": "https://www.youtube.com/watch?v=mIrO94FXJRk",
+      "flattenedList": [
+        {
+          "title": "Baccano!",
+          "url": "https://anilist.co/anime/2251/Baccano/",
+          "caveat": null
+        },
+        {
+          "title": "Patlabor",
+          "url": "https://anilist.co/anime/324/Mobile-Police-Patlabor-ON-TELEVISION/",
+          "caveat": "Note: All entries combined."
+        },
+        {
+          "title": "Re:ZERO",
+          "url": "https://anilist.co/anime/21355/ReZERO-Starting-Life-in-Another-World/",
+          "caveat": "Caveat: Expected Top 10-15. Could move higher."
+        },
+        {
+          "title": "Chihayafuru",
+          "url": "https://anilist.co/anime/10800/Chihayafuru/",
+          "caveat": "Caveat: Expected Top 10-15."
+        },
+        {
+          "title": "Frieren: Beyond Journey's End",
+          "url": "https://anilist.co/anime/154587/Frieren-Beyond-Journeys-End/",
+          "caveat": "Caveat: Tentatively placed in the late teens/early 20s."
+        },
+        {
+          "title": "Delicious in Dungeon",
+          "url": "https://anilist.co/anime/153518/Delicious-in-Dungeon/",
+          "caveat": "Caveat: Tentatively placed in the late teens/early 20s."
+        },
+        {
+          "title": "Princess Mononoke",
+          "url": "https://anilist.co/anime/164/Princess-Mononoke/",
+          "caveat": "Caveat: Tentatively placed in the 30s."
+        },
+        {
+          "title": "Royal Space Force",
+          "url": "https://anilist.co/anime/1034/Royal-Space-Force-The-Wings-of-Honnamise/",
+          "caveat": null
+        },
+        {
+          "title": "KonoSuba",
+          "url": "https://anilist.co/anime/21202/KONOSUBA-Gods-blessing-on-this-wonderful-world/",
+          "caveat": "Note: All seasons and movie combined."
+        },
+        {
+          "title": "Vampire Hunter D: Bloodlust",
+          "url": "https://anilist.co/anime/543/Vampire-Hunter-D-Bloodlust/",
+          "caveat": null
+        },
+        {
+          "title": "Akudama Drive",
+          "url": "https://anilist.co/anime/116566/Akudama-Drive/",
+          "caveat": null
+        },
+        {
+          "title": "Cromartie High School",
+          "url": "https://anilist.co/anime/114/Cromartie-High-School/",
+          "caveat": null
+        }
+      ],
+      "absoluteList": {
+        "1": {
+          "title": "Baccano!",
+          "url": "https://anilist.co/anime/2251/Baccano/"
+        },
+        "2": {
+          "title": "Patlabor",
+          "url": "https://anilist.co/anime/324/Mobile-Police-Patlabor-ON-TELEVISION/"
+        },
+        "10": {
+          "title": "Chihayafuru",
+          "url": "https://anilist.co/anime/10800/Chihayafuru/",
+          "range": [
+            8,
+            12
+          ]
+        },
+        "13": {
+          "title": "Re:Zero",
+          "url": "https://anilist.co/anime/21355/ReZERO-Starting-Life-in-Another-World/",
+          "range": [
+            10,
+            15
+          ]
+        },
+        "19": {
+          "title": "Frieren",
+          "url": "https://anilist.co/anime/154587/Frieren-Beyond-Journeys-End/",
+          "range": [
+            16,
+            25
+          ]
+        },
+        "20": {
+          "title": "Dungeon Meshi",
+          "url": "https://anilist.co/anime/153518/Delicious-in-Dungeon/",
+          "range": [
+            16,
+            25
+          ]
+        },
+        "35": {
+          "title": "P. Mononoke",
+          "url": "https://anilist.co/anime/164/Princess-Mononoke/",
+          "range": [
+            30,
+            40
+          ]
+        },
+        "50": {
+          "title": "Royal Space Force",
+          "url": "https://anilist.co/anime/1034/Royal-Space-Force-The-Wings-of-Honnamise/"
+        },
+        "51": {
+          "title": "KonoSuba",
+          "url": "https://anilist.co/anime/21202/KONOSUBA-Gods-blessing-on-this-wonderful-world/"
+        },
+        "52": {
+          "title": "Vampire Hunter D",
+          "url": "https://anilist.co/anime/543/Vampire-Hunter-D-Bloodlust/"
+        },
+        "53": {
+          "title": "Akudama Drive",
+          "url": "https://anilist.co/anime/116566/Akudama-Drive/"
+        },
+        "54": {
+          "title": "Cromartie High",
+          "url": "https://anilist.co/anime/114/Cromartie-High-School/"
+        }
+      },
+      "killQuested": [
+        {
+          "title": "Solo Leveling",
+          "url": "https://anilist.co/anime/151807/Solo-Leveling/",
+          "caveat": null
+        },
+        {
+          "title": "Your Name",
+          "url": "https://anilist.co/anime/21519/Your-Name/",
+          "caveat": null
+        }
+      ]
+    }
+  ],
+  "currentEpisode": 11,
+  "lastUpdated": "2025-07-18"
+}
