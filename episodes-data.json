@@ -614,8 +614,163 @@
           "caveat": null
         }
       ]
+    },
+    {
+      "episodeNumber": 12,
+      "title": "Quest 000: Pompo the Cinéphile",
+      "date": "2025-07-21",
+      "url": "https://www.youtube.com/watch?v=e-hthgZi3-s",
+      "flattenedList": [
+        {
+          "title": "Baccano!",
+          "url": "https://anilist.co/anime/2251/Baccano/",
+          "caveat": null
+        },
+        {
+          "title": "Patlabor",
+          "url": "https://anilist.co/anime/324/Mobile-Police-Patlabor-ON-TELEVISION/",
+          "caveat": "Note: All entries combined."
+        },
+        {
+          "title": "Re:ZERO",
+          "url": "https://anilist.co/anime/21355/ReZERO-Starting-Life-in-Another-World/",
+          "caveat": "Caveat: Expected Top 10-15. Could move higher."
+        },
+        {
+          "title": "Chihayafuru",
+          "url": "https://anilist.co/anime/10800/Chihayafuru/",
+          "caveat": "Caveat: Expected Top 10-15."
+        },
+        {
+          "title": "Frieren: Beyond Journey's End",
+          "url": "https://anilist.co/anime/154587/Frieren-Beyond-Journeys-End/",
+          "caveat": "Caveat: Tentatively placed in the late teens/early 20s."
+        },
+        {
+          "title": "Delicious in Dungeon",
+          "url": "https://anilist.co/anime/153518/Delicious-in-Dungeon/",
+          "caveat": "Caveat: Tentatively placed in the late teens/early 20s."
+        },
+        {
+          "title": "Princess Mononoke",
+          "url": "https://anilist.co/anime/164/Princess-Mononoke/",
+          "caveat": "Caveat: Tentatively placed in the 30s."
+        },
+        {
+          "title": "Royal Space Force",
+          "url": "https://anilist.co/anime/1034/Royal-Space-Force-The-Wings-of-Honnamise/",
+          "caveat": null
+        },
+        {
+          "title": "KonoSuba",
+          "url": "https://anilist.co/anime/21202/KONOSUBA-Gods-blessing-on-this-wonderful-world/",
+          "caveat": "Note: All seasons and movie combined."
+        },
+        {
+          "title": "Vampire Hunter D: Bloodlust",
+          "url": "https://anilist.co/anime/543/Vampire-Hunter-D-Bloodlust/",
+          "caveat": null
+        },
+        {
+          "title": "Akudama Drive",
+          "url": "https://anilist.co/anime/116566/Akudama-Drive/",
+          "caveat": null
+        },
+        {
+          "title": "Cromartie High School",
+          "url": "https://anilist.co/anime/114/Cromartie-High-School/",
+          "caveat": null
+        },
+        {
+          "title": "Pompo the Cinéphile",
+          "url": "https://anilist.co/anime/117929/Pompo-the-Cinephile/",
+          "caveat": "Likely will not make the Top 100, or will be very low if it does."
+        }
+      ],
+      "absoluteList": {
+        "1": {
+          "title": "Baccano!",
+          "url": "https://anilist.co/anime/2251/Baccano/"
+        },
+        "2": {
+          "title": "Patlabor",
+          "url": "https://anilist.co/anime/324/Mobile-Police-Patlabor-ON-TELEVISION/"
+        },
+        "10": {
+          "title": "Chihayafuru",
+          "url": "https://anilist.co/anime/10800/Chihayafuru/",
+          "range": [
+            8,
+            12
+          ]
+        },
+        "13": {
+          "title": "Re:Zero",
+          "url": "https://anilist.co/anime/21355/ReZERO-Starting-Life-in-Another-World/",
+          "range": [
+            10,
+            15
+          ]
+        },
+        "19": {
+          "title": "Frieren",
+          "url": "https://anilist.co/anime/154587/Frieren-Beyond-Journeys-End/",
+          "range": [
+            16,
+            25
+          ]
+        },
+        "20": {
+          "title": "Dungeon Meshi",
+          "url": "https://anilist.co/anime/153518/Delicious-in-Dungeon/",
+          "range": [
+            16,
+            25
+          ]
+        },
+        "35": {
+          "title": "P. Mononoke",
+          "url": "https://anilist.co/anime/164/Princess-Mononoke/",
+          "range": [
+            30,
+            40
+          ]
+        },
+        "50": {
+          "title": "Royal Space Force",
+          "url": "https://anilist.co/anime/1034/Royal-Space-Force-The-Wings-of-Honnamise/"
+        },
+        "51": {
+          "title": "KonoSuba",
+          "url": "https://anilist.co/anime/21202/KONOSUBA-Gods-blessing-on-this-wonderful-world/"
+        },
+        "52": {
+          "title": "Vampire Hunter D",
+          "url": "https://anilist.co/anime/543/Vampire-Hunter-D-Bloodlust/"
+        },
+        "53": {
+          "title": "Akudama Drive",
+          "url": "https://anilist.co/anime/116566/Akudama-Drive/"
+        },
+        "54": {
+          "title": "Cromartie High",
+          "url": "https://anilist.co/anime/114/Cromartie-High-School/"
+        }
+      },
+      "killQuested": [
+        {
+          "title": "Solo Leveling",
+          "url": "https://anilist.co/anime/151807/Solo-Leveling/",
+          "caveat": null
+        },
+        {
+          "title": "Your Name",
+          "url": "https://anilist.co/anime/21519/Your-Name/",
+          "caveat": null
+        }
+      ]
     }
   ],
-  "currentEpisode": 11,
-  "lastUpdated": "2025-07-18"
+  "currentEpisode": 12,
+  "lastUpdated": "2025-07-21"
 }
